@@ -3,6 +3,19 @@
   https://codyhouse.co/gem/vertical-timeline/
 ***********/
 jQuery(document).ready(function($){
+  /* Load image files */
+  var folder = "images/";
+  $.ajax({
+      url : folder,
+      success: function (data) {
+          $(data).find("a").attr("href", function (i, val) {
+              if( val.match(/\.(jpe?g|JPE?G|png|gif)$/) ) {
+                $("#img-repo").append("<div class='item' id='image-" + parseInt(val.match(/\d+/)[0]) + "'><img class='thumbnail img-responsive' src='" + folder + val + "'></div>");
+              }
+            });
+        }
+    });
+
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
 
@@ -60,4 +73,5 @@ jQuery(document).ready(function($){
     // show the modal
   	$("#modal-gallery").modal("show");
   });
+
 });

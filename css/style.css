@@ -35,6 +35,7 @@ a {
 
 img {
   max-width: 100%;
+  image-orientation: from-image;
 }
 
 h1, h2 {
@@ -69,7 +70,7 @@ header {
   height: 200px;
   line-height: 200px;
   text-align: center;
-  background: #000033 url("../images/JMHeader.jpg") no-repeat center center fixed; 
+  background: #000033 url("../images/image-1-24.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -214,6 +215,9 @@ footer {
 }
 .cd-timeline-img.cd-location {
   background: #c03b44;
+}
+.cd-timeline-img.cd-puppy {
+  background: #ffbdc7;
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
@@ -558,4 +562,8 @@ Carousel
   background-image:none;
   margin-top:10%;
   width:5%;
+}
+
+div.modal-header .close {
+  margin-top: -10px;
 }
