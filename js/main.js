@@ -4,7 +4,7 @@
 ***********/
 jQuery(document).ready(function($){
   /* Load image files */
-  var folder = "./images/";
+  var folder = "./dist/images/";
   $.ajax({
       url : folder,
       success: function (data) {
