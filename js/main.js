@@ -10,7 +10,8 @@ jQuery(document).ready(function($){
       success: function (data) {
           $(data).find("a").attr("href", function (i, val) {
               if( val.match(/\.(jpe?g|JPE?G|png|gif)$/) ) {
-                $("#img-repo").append("<div class='item' id='image-" + parseInt(val.match(/\d+/)[0]) + "'><img class='thumbnail img-responsive' src='" + folder + val + "'></div>");
+                var filename = this.href.replace(window.location, "").replace("https://", "");
+                $("#img-repo").append("<div class='item' id='image-" + parseInt(val.match(/\d+/)[0]) + "'><img class='thumbnail img-responsive' src='" + folder + filename + "'></div>");
               }
             });
         }
