@@ -4,7 +4,7 @@
 ***********/
 jQuery(document).ready(function($){
   /* Load image files */
-  var folder = "./images/";
+  var folder = "https://michelle-lawrence.github.io/vanoverloop-2016/images/";
   $.ajax({
       url : folder,
       success: function (data) {
