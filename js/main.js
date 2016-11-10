@@ -99,7 +99,6 @@ jQuery(document).ready(function($){
     }
     for (var i = 1; i <= numImages; i++) { 
       var imgNum = (i < 10 ? "0" + i : "" + i);
-      console.log(imgNum); 
       $("#img-repo").append("<div class='item' id='image-" 
         + repoId + "'><img class='thumbnail img-responsive' src='images/" + folderExt + "/image-" 
         + repoId + "-" + imgNum + ".JPG'></div>");
