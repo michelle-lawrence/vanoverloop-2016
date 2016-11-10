@@ -102,7 +102,7 @@ jQuery(document).ready(function($){
       $("#img-repo").append("<div class='item' id='image-" 
         + repoId + "'><img class='thumbnail img-responsive' src='images/" + folderExt + "/image-" 
         + repoId + "-" + imgNum + ".JPG'></div>");
-    }
+    } 
 
 
     var content = $(".carousel-inner");
