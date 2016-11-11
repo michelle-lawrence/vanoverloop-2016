@@ -3,20 +3,20 @@
   https://codyhouse.co/gem/vertical-timeline/
 ***********/
 jQuery(document).ready(function($){
-  /* Load image files - nice way but not working on GitHub*/
-  // var folder = "images/";
-  // $.ajax({
-  //     url : folder,
-  //     success: function (data) {
-  //         $(data).find("a").attr("href", function (i, val) {
-  //             if( val.match(/\.(jpe?g|JPE?G|png|gif)$/) ) {
-  //               $("#img-repo").append("<div class='item' id='image-" 
-  //                 + parseInt(val.match(/\d+/)[0]) + "'><img class='thumbnail img-responsive' src='" 
-  //                 + folder + val + "'></div>");
-  //             }
-  //           });
-  //       }
-  //   });
+  /* Load image files*/
+  var folder = "images/";
+  $.ajax({
+      url : folder,
+      success: function (data) {
+          $(data).find("a").attr("href", function (i, val) {
+              if( val.match(/\.(jpe?g|JPE?G|png|gif)$/) ) {
+                $("#img-repo").append("<div class='item' id='image-" 
+                  + parseInt(val.match(/\d+/)[0]) + "'><img class='thumbnail img-responsive' src='" 
+                  + folder + val + "'></div>");
+              }
+            });
+        }
+    });
 
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
@@ -57,54 +57,6 @@ jQuery(document).ready(function($){
 
    /* when clicking a thumbnail */
    $(".thumbnail").click(function(){
-    /* Load images - hacky way */
-    var repoId = parseInt(this.id.match(/\d+/)[0]);
-    var numImages = 0;
-    var folderExt = "";
-    switch (repoId) {
-      case 1: 
-        numImages = 40;
-        folderExt = "October23";
-        break;
-      case 2:
-        numImages = 2;
-        folderExt = "October24";
-        break;
-      case 3: 
-        numImages = 6
-        folderExt = "October25";
-        break;
-      case 4:
-        numImages = 19;
-        folderExt = "October26";
-        break;
-      case 5:
-        numImages = 13;
-        folderExt = "October27";
-        break;
-      case 6: 
-        numImages = 34;
-        folderExt = "October28";
-        break;
-      case 7:
-        numImages = 27;
-        folderExt = "October29";
-        break;
-      case 8:
-        numImages = 4;
-        folderExt = "October30";
-        break;
-      default:
-        break;
-    }
-    for (var i = 1; i <= numImages; i++) { 
-      var imgNum = (i < 10 ? "0" + i : "" + i);
-      $("#img-repo").append("<div class='item' id='image-" 
-        + repoId + "'><img class='thumbnail img-responsive' src='images/" + folderExt + "/image-" 
-        + repoId + "-" + imgNum + ".JPG'></div>");
-    } 
-
-
     var content = $(".carousel-inner");
     var title = $(".modal-title");
   
