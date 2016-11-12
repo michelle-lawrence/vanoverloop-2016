@@ -18,11 +18,6 @@ jQuery(document).ready(function($){
   //       }
   //   });
 
-  for (var i = 1; i <= 40; i++) { 
-    var imgNum = (i < 10 ? "0" + i : "" + i);
-    $("#img-repo").append("<div class='item' id='image-1'><img class='thumbnail img-responsive' src='images/October23/image-1-" + imgNum + ".JPG'/></div>");
-  } 
-
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
 
