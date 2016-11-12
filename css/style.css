@@ -125,6 +125,19 @@ footer {
     width: 400px;
   }
 }
+@media only screen and (max-width : 640px) {
+  header {
+    background: #000033 no-repeat center center fixed; 
+    text-align: center;
+  }
+  header h1, header h3 {
+    right: 0;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+  header h3 {top: 60px;}
+}
 
 #cd-timeline {
   position: relative;
