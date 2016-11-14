@@ -578,6 +578,10 @@ Carousel
   width:5%;
 }
 
+body.modal-open {
+    overflow: visible;
+}
+
 div.modal-header .close {
   margin-top: -10px;
 }
